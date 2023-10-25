@@ -1,0 +1,35 @@
+-r requirements-prod.txt
+
+# tools
+flake8
+black
+isort
+django-types
+django-extensions
+coverage
+ipython
+parameterized
+WeasyPrint
+
+mutmut
+
+tzdata
+uvicorn
+
+# AWS
+boto3
+
+# For managing ORMs
+factory-boy
+
+# Data generator
+Faker
+
+# For sentry manager
+sentry-sdk
+
+# Testing and coverage
+pytest
+pytest-django
+pytest-cov
+pytest-html

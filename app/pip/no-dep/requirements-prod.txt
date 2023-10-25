@@ -1,0 +1,11 @@
+# FastAPI
+fastapi
+httpx
+fastapi-utils
+pydantic[dotenv]
+pydantic[email]
+mangum
+python-multipart
+
+Django==4.1
+psycopg2-binary
