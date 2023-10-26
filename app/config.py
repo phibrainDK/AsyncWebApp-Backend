@@ -38,6 +38,7 @@ class AwsSettings(BaseSettings):
     APP_DYNAMODB_TABLE_VD: str = ""
     COGNITO_USER_POOL_ID: str = ""
     BACKEND_BUCKET_NAME: str = ""
+    WEBSOCKETS_SERVER_NAME: str = ""
     class Config:
         env_file = ".env"
 

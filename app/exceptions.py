@@ -220,23 +220,30 @@ class WDSLambdaMultipleRequestException(WDSException):
     )
 
 
-class LambdaSessionException(WDSException):
-    status_code = status.HTTP_422_UNPROCESSABLE_ENTITY
-    error_code = "LAM001"
-    error_message = "Couldn't create a session from lambda AWS service"
-    translated_error_message = ""
 
-
-class LambdaAsyncException(WDSException):
+class LambdaResourceNotFoundException(WDSException):
     status_code = status.HTTP_422_UNPROCESSABLE_ENTITY
-    error_code = "LAM002"
+    error_code = "LAM004"
     error_message = (
-        "An unexpected problem ocurred while calling async lambda AWS service"
+        "Not found resource lambda AWS service"
     )
     translated_error_message = ""
 
     def __init__(self, error_message: str) -> None:
         self.error_message = error_message
+
+
+class LambdaInvocationException(WDSException):
+    status_code = status.HTTP_422_UNPROCESSABLE_ENTITY
+    error_code = "LAM005"
+    error_message = (
+        "Error while invocation lambda AWS service"
+    )
+    translated_error_message = ""
+
+    def __init__(self, error_message: str) -> None:
+        self.error_message = error_message
+
 
 
 # ===================================== S3 Exceptions ==============================

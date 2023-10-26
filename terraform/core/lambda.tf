@@ -87,10 +87,11 @@ resource "aws_lambda_function" "app" {
 
   environment {
     variables = {
-      API_URL_PREFIX    = var.api_url_prefix,
-      API_VERSION       = var.api_version,
-      DEPLOY_REGION     = var.deploy_region,
-      ENV_STAGE         = local.stage,
+      API_URL_PREFIX         = var.api_url_prefix,
+      API_VERSION            = var.api_version,
+      DEPLOY_REGION          = var.deploy_region,
+      ENV_STAGE              = local.stage,
+      WEBSOCKETS_SERVER_NAME = "wds-server"
     }
   }
 }

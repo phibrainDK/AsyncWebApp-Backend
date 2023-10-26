@@ -22,8 +22,8 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 DOCUMENTATION_SUFFIX = "/openapi.json"
 
-# root_path = f"/{settings.ENV_STAGE}-tf" if settings.ENV_STAGE else ""
-root_path = ""
+root_path = f"/{settings.ENV_STAGE}-tf" if settings.ENV_STAGE else ""
+# root_path = ""
 app: Any = FastAPI(
     title="WDS BACKEND API",
     version=settings.API_VERSION,
