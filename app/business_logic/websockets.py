@@ -9,6 +9,9 @@ from schemas.others.websockets import WSMessageOut
 
 logger = logging.getLogger(__name__)
 
+# TODO: Make it dynamically
+
+WS_ENDPOINT = "zz5zdc3m7h.execute-api.us-east-1.amazonaws.com/app-wds-ws-tf-wds-tf-wds"
 
 class WebSockets:
     def __init__(self):
@@ -19,6 +22,7 @@ class WebSockets:
             "type": "WS",
             "requestContext": {
                 "eventType": "CUSTOM_MODE",
+                "endpoint": WS_ENDPOINT,
                 "customMessage": message,
             }
         }

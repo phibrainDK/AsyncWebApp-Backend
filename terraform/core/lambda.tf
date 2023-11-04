@@ -11,6 +11,7 @@ resource "null_resource" "ecr_image" {
     schemas_dir        = md5(join("", fileset("../../app/schemas/", "**")))
     python_files       = md5(join("", fileset("../../app/", "*.py")))
     dockerfile         = md5(file("../../app/Dockerfile"))
+    data               = md5(file("../../app/api/main.py"))
   }
 
   provisioner "local-exec" {
@@ -91,7 +92,7 @@ resource "aws_lambda_function" "app" {
       API_VERSION            = var.api_version,
       DEPLOY_REGION          = var.deploy_region,
       ENV_STAGE              = local.stage,
-      WEBSOCKETS_SERVER_NAME = "wds-server"
+      WEBSOCKETS_SERVER_NAME = "app-wds-ws-tf-wds-tf-be-core",
     }
   }
 }

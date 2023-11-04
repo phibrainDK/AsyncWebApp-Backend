@@ -116,8 +116,9 @@ app.include_router(router, prefix=settings.API_URL_PREFIX)
 
 
 def handler(event, context):  # pragma: no cover
-    logger.info(f":: event-WDSder :: main-handler event = {event}")
-    logger.info(f":: event-WDSder :: main-handler context = {context}")
+    logger.info(f":: event-WDS :: main-handler event = {event}")
+    logger.info(f":: event-WDS :: main-handler context = {context}")
     asgi_handler = Mangum(app)
     response = asgi_handler(event, context)
     return response
+``

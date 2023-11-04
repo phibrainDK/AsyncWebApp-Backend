@@ -27,6 +27,7 @@ class Authentication:
         🤔🤔👀👀😎😎
         Gets the email of the user related with the given access_token
         """
+        logger.info(f"trying to track email via access_token = {access_token}")
         CognitoException = client_cognito.exceptions
         try:
             response = client_cognito.get_user(AccessToken=access_token)
