@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 # TODO: Make it dynamically
 
-WS_ENDPOINT = "zz5zdc3m7h.execute-api.us-east-1.amazonaws.com/app-wds-ws-tf-wds-tf-wds"
+WS_ENDPOINT = "zhzrjvpil0.execute-api.us-east-1.amazonaws.com/app-wds-ws-tf-wds-tf-wds"
 
 class WebSockets:
     def __init__(self):

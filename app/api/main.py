@@ -121,4 +121,3 @@ def handler(event, context):  # pragma: no cover
     asgi_handler = Mangum(app)
     response = asgi_handler(event, context)
     return response
-``
